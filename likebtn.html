@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Your Website</title>
+    <style>
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #c3a3f1, #6414e9);
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 34.37em;
+            max-height: 90vh;
+            background-color: #ffffff;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            padding: 3em;
+            border-radius: 1em;
+            box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #wheel {
+            max-height: inherit;
+            width: inherit;
+            top: 0;
+            padding: 0;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #spin-btn {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            height: 26%;
+            width: 26%;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 0;
+            background: radial-gradient(#fdcf3b 50%, #d88a40 85%);
+            color: #c66e16;
+            text-transform: uppercase;
+            font-size: 1.8em;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        img {
+            position: absolute;
+            width: 4em;
+            top: 45%;
+            right: -8%;
+        }
+
+        #final-value {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 1.5em;
+            color: #202020;
+            font-weight: 500;
+        }
+
+        @media screen and (max-width: 768px) {
+            .wrapper {
+                font-size: 12px;
+            }
+
+            img {
+                right: -5%;
+            }
+        }
+
+
+
+
+
+        /* ----------------------------------------- */
+
+
+        @import "http://fonts.googleapis.com/css?family=Raleway";
+
+        /*----------------------------------------------
+CSS settings for HTML div Exact Center
+------------------------------------------------*/
+        #abc {
+            width: 100%;
+            height: 100%;
+            opacity: .95;
+            top: 0;
+            left: 0;
+            display: none;
+            position: fixed;
+            background-color: #313131;
+            overflow: auto
+        }
+
+        #abcone {
+            width: 100%;
+            height: 100%;
+            opacity: .95;
+            top: 0;
+            left: 0;
+            display: none;
+            position: fixed;
+            background-color: #313131;
+            overflow: auto
+        }
+
+        img#close {
+            position: absolute;
+            right: 0px;
+            top: 1px;
+            cursor: pointer;
+            width: 35px;
+        }
+
+        /* img#close {
+            position: absolute;
+            right: -14px;
+            top: -14px;
+            cursor: pointer
+        } */
+
+        div#popupContact {
+            position: absolute;
+            left: 50%;
+            top: 17%;
+            margin-left: -202px;
+            font-family: 'Raleway', sans-serif
+        }
+
+        div#popupContactone {
+            position: absolute;
+            left: 50%;
+            top: 17%;
+            margin-left: -202px;
+            font-family: 'Raleway', sans-serif
+        }
+
+        form {
+            max-width: 300px;
+            min-width: 250px;
+            padding: 10px 50px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            font-family: raleway;
+            background-color: #fff
+        }
+
+        p {
+            margin-top: 30px
+        }
+
+        h2 {
+            background-color: #FEFFED;
+            padding: 20px 35px;
+            margin: -10px -50px;
+            text-align: center;
+            border-radius: 10px 10px 0 0
+        }
+
+        hr {
+            margin: 10px -50px;
+            border: 0;
+            border-top: 1px solid #ccc
+        }
+
+        input[type=text] {
+            width: 82%;
+            padding: 10px;
+            margin-top: 30px;
+            border: 1px solid #ccc;
+            padding-left: 40px;
+            font-size: 16px;
+            font-family: raleway
+        }
+
+        #name {
+            background-image: url(../images/name.jpg);
+            background-repeat: no-repeat;
+            background-position: 5px 7px
+        }
+
+        #email {
+            background-image: url(../images/email.png);
+            background-repeat: no-repeat;
+            background-position: 5px 7px
+        }
+
+        textarea {
+            background-image: url(../images/msg.png);
+            background-repeat: no-repeat;
+            background-position: 5px 7px;
+            width: 82%;
+            height: 95px;
+            padding: 10px;
+            resize: none;
+            margin-top: 30px;
+            border: 1px solid #ccc;
+            padding-left: 40px;
+            font-size: 16px;
+            font-family: raleway;
+            margin-bottom: 30px
+        }
+
+        #submit {
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+            display: block;
+            background-color: #FFBC00;
+            color: #fff;
+            border: 1px solid #FFCB00;
+            padding: 10px 0;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px
+        }
+
+        span {
+            color: red;
+            font-weight: 700
+        }
+
+        button {
+            width: 10%;
+            height: 45px;
+            border-radius: 3px;
+            background-color: #cd853f;
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body onload="onload_show()">
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Paste the generated Facebook Page Like button code here -->
+    <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100081992193138" data-tabs="timeline"
+        data-width="300" data-height="300" data-small-header="false" data-adapt-container-width="true"
+        data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/profile.php?id=100081992193138" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/profile.php?id=100081992193138">Your Page Name</a>
+        </blockquote>
+    </div>
+
+    <!-- Include the Facebook SDK JavaScript -->
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v17.0&appId=813653066018549&autoLogAppEvents=1"></script>
+
+    <!-- Redirect JavaScript code -->
+    <script>
+        // Trigger the redirection after the Like button is clicked
+        function redirectToURL() {
+            window.location.href = 'https://www.google.com';
+        }
+    </script>
+
+    <script>
+
+        document.querySelector('.fb-page').addEventListener('click', redirectToURL);
+        // Trigger the redirection after the Like button is clicked
+        function redirectToURL() {
+            window.location.href = 'https://www.google.com';
+        }
+
+        document.querySelector('a').addEventListener('click', () => {
+            window.location.href = 'https://www.google.com';
+        }, 2000);
+        // Trigger the redirection after the Like button is clicked
+
+        // Listen for the Like button click event
+
+    </script>
+
+
+
+
+    <div class="wrapper">
+        <div class="container">
+            <canvas id="wheel"></canvas>
+            <button id="spin-btn">Spin</button>
+            <img src="https://cutewallpaper.org/24/yellow-arrow-png/155564497.jpg" alt="spinner arrow" />
+        </div>
+        <div id="final-value">
+            <p>Click On The Spin Button To Start</p>
+        </div>
+    </div>
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Chart JS Plugin for displaying text over chart -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <!-- Script -->
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+    <section id="body" style="overflow:hidden;">
+        <div id="abc">
+            <!-- Popup Div Starts Here -->
+            <div id="popupContact">
+                <!-- Contact Us Form -->
+                <form action="#" id="form" method="post" name="form">
+                    <img id="close" src="./images/cancle.png" onclick="div_hide()">
+                    <h2>Contact Us</h2>
+                    <div id="final-valuehere">
+                        <p>You won</p>
+                    </div>
+                    <hr>
+                    <input id="name" name="name" placeholder="Name" type="text">
+                    <input id="nameone" name="name" placeholder="Name" type="text" readonly>
+                    <input id=" email" name="email" placeholder="Email" type="text">
+                    <textarea id="msg" name="message" placeholder="Message"></textarea>
+                    <a href="javascript:%20check_empty()" id="submit">Send</a>
+                </form>
+            </div>
+            <!-- Popup Div Ends Here -->
+        </div>
+        <!-- Display Popup Button -->
+        <!-- <h1>Click Button To Popup Form Using Javascript</h1>
+        <button id="popup" onclick="div_show()">Popup</button> -->
+    </section>
+
+
+
+
+
+
+
+    <section id="body" style="overflow:hidden;">
+        <div id="abcone">
+            <!-- Popup Div Starts Here -->
+            <div id="popupContactone">
+                <!-- Contact Us Form -->
+                <form action="#" id="form" method="post" name="form">
+                    <img id="close" src="remove.png" onclick="div_hideone()">
+                    <h2>Follow Us and get chance to spin the wheel</h2>
+                    <div id="final-valuehere">
+                        <p>You won</p>
+                    </div>
+                    <hr>
+                    <!-- Paste the generated Facebook Page Like button code here -->
+                    <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100081992193138"
+                        data-tabs="timeline" data-width="300" data-height="300" data-small-header="false"
+                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/profile.php?id=100081992193138"
+                            class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/profile.php?id=100081992193138">Your Page Name</a>
+                        </blockquote>
+                    </div>
+                </form>
+            </div>
+            <!-- Popup Div Ends Here -->
+        </div>
+        <!-- Display Popup Button -->
+        <!-- <h1>Click Button To Popup Form Using Javascript</h1>
+        <button id="popup" onclick="div_show()">Popup</button> -->
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>
